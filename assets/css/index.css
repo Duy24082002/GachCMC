@@ -1,0 +1,175 @@
+/* Màu sắc chủ đạo cho toàn bộ trang web */
+:root {
+    --main-color: #007BFF; /* Xanh dương đậm */
+    --background-color: #f0f8ff; /* Màu nền sáng */
+    --text-color: #333; /* Màu chữ chính */
+    --link-color: #007BFF; /* Màu liên kết */
+    --footer-background: #0056b3; /* Màu nền footer (xanh dương đậm hơn) */
+}
+
+/* Toàn bộ trang */
+body {
+    font-family: Arial, sans-serif;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    margin: 0;
+    padding: 0;
+}
+
+/* Header */
+header {
+    background-color: var(--main-color);
+    padding: 20px 0;
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
+
+header .logo img {
+    height: 50px;
+}
+
+nav ul {
+    display: flex;
+    list-style-type: none;
+}
+
+nav ul li {
+    margin-right: 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 16px;
+}
+
+header .header-links a {
+    color: white;
+    margin-left: 15px;
+    text-decoration: none;
+}
+
+/* Hero Section */
+.hero {
+    background-color: var(--main-color);
+    padding: 50px 0;
+    text-align: center;
+}
+
+.hero .hero-content {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.hero-image {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+}
+
+/* Content Section */
+.content-section {
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.content-section h2 {
+    color: var(--main-color);
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+/* Slider */
+.product-slider {
+    position: relative;
+    max-width: 100%;
+    overflow: hidden;
+    margin: 30px 0;
+}
+
+.slider-container {
+    display: flex;
+    transition: transform 1s ease-in-out;
+}
+
+.slider-image {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    flex-shrink: 0;
+}
+
+/* Footer */
+footer {
+    background-color: var(--footer-background);
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+}
+
+footer p {
+    display: flex;
+    justify-content: space-between; /* Chia đều khoảng cách giữa hai phần tử */
+    width: 100%; /* Đảm bảo văn bản chiếm toàn bộ chiều rộng */
+    margin: 0;
+}
+
+footer .left-text {
+    text-align: left; /* Căn lề trái cho phần đầu */
+}
+
+footer .right-text {
+    text-align: right; /* Căn lề phải cho phần cuối */
+}
+
+
+
+/* Các liên kết */
+a {
+    color: var(--link-color);
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Căn chỉnh các biểu tượng liên kết nổi */
+.floating-contact-links {
+    position: fixed;
+    bottom: 20px; /* Khoảng cách từ dưới cùng của màn hình */
+    right: 20px;  /* Khoảng cách từ bên phải màn hình */
+    z-index: 9999; /* Đảm bảo biểu tượng nổi trên các phần khác */
+    display: flex;
+    flex-direction: column;
+    gap: 10px; /* Khoảng cách giữa các biểu tượng */
+}
+
+/* Căn chỉnh các liên kết */
+.contact-link {
+    display: inline-block;
+    text-decoration: none;
+}
+
+/* Định dạng các biểu tượng */
+.contact-icon {
+    width: 50px; /* Kích thước biểu tượng */
+    height: 50px;
+    object-fit: contain;
+    border-radius: 50%; /* Làm tròn các biểu tượng */
+    background-color: #007bff; /* Màu nền cho biểu tượng */
+    padding: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease-in-out, background-color 0.3s ease;
+}
+
+/* Hiệu ứng hover cho các biểu tượng */
+.contact-icon:hover {
+    transform: scale(1.1); /* Phóng to biểu tượng khi hover */
+    background-color: #0056b3; /* Đổi màu nền khi hover */
+}
